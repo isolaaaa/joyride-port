@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gameList>
+  <game>
+    <path>./Joyride.sh</path>
+    <name>Jetpack Joyride</name>
+    <desc>Bullet-powered jetpacks! Giant mechanical dragons! Birds that shoot money! Suit up with a selection of the coolest jetpacks ever made and test your skills as Barry Steakfries in this endless runner by Halfbrick Studios.</desc>
+    <developer>Halfbrick Studios</developer>
+    <publisher>Halfbrick Studios</publisher>
+    <genre>Action, Arcade, Endless Runner</genre>
+  </game>
+</gameList>

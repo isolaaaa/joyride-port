@@ -1,0 +1,5 @@
+# joyride.gptk -- Controller configuration for Jetpack Joyride on PortMaster / NextOS
+# GameController, virtual cursor, and touch events are handled natively inside joyride-nextos.
+# gptokeyb is maintained as an emergency kill-safety net.
+
+hotkey = select

@@ -1,0 +1,2 @@
+Place com.halfbrick.jetpackjoyride.apk here before launching the game.
+Coloque o arquivo com.halfbrick.jetpackjoyride.apk aqui antes de iniciar o jogo.

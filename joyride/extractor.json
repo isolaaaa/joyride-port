@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "id": "joyride-nextos",
+  "version": "1.16.2-arm64-1",
+  "title": "JETPACK JOYRIDE",
+  "abi_order": [
+    "arm64-v8a"
+  ],
+  "input": {
+    "search_dirs": [
+      "gamedata",
+      "."
+    ],
+    "prefer_first_nonempty": true,
+    "sniff_all_in_primary": true,
+    "packages": [
+      "com.halfbrick.jetpackjoyride"
+    ],
+    "max_files": 32,
+    "max_bundle_apks": 16,
+    "max_member_bytes": 536870912,
+    "max_bundle_bytes": 1073741824
+  },
+  "extract": [
+    {
+      "id": "engine-mortar-arm64",
+      "source": {
+        "kind": "entry",
+        "patterns": [
+          "lib/{abi}/libmortargame.so"
+        ]
+      },
+      "destination": "lib/libmortargame.so",
+      "validate": {
+        "type": "file",
+        "elf_machine": "{abi}",
+        "size": 19532352,
+        "sha256": "859fc18797d29dcc2e431719c652f92b8e9574a31af5af9f94638ebd3041be1a"
+      }
+    },
+    {
+      "id": "owner-apk",
+      "source": {
+        "kind": "container"
+      },
+      "destination": "gamedata/com.halfbrick.jetpackjoyride.apk",
+      "validate": {
+        "type": "file",
+        "min_size": 50000000,
+        "max_size": 250000000,
+        "magic_hex": "504b0304"
+      }
+    }
+  ],
+  "hooks": [],
+  "validate": [
+    {
+      "path": "lib/libmortargame.so",
+      "type": "file",
+      "elf_machine": "arm64-v8a",
+      "size": 19532352,
+      "sha256": "859fc18797d29dcc2e431719c652f92b8e9574a31af5af9f94638ebd3041be1a"
+    },
+    {
+      "path": "gamedata/com.halfbrick.jetpackjoyride.apk",
+      "type": "file",
+      "min_size": 50000000,
+      "max_size": 250000000,
+      "magic_hex": "504b0304"
+    }
+  ],
+  "commit": [
+    "lib/libmortargame.so",
+    "gamedata/com.halfbrick.jetpackjoyride.apk"
+  ],
+  "marker": ".nxextract-joyride.json",
+  "space": {
+    "safety_bytes": 268435456
+  },
+  "log": "nxextract.log",
+  "ui_success_seconds": 1,
+  "ui_error_seconds": 5
+}
