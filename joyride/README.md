@@ -1,4 +1,4 @@
-# Jetpack Joyride for R36s / PortMaster
+# Jetpack Joyride for R36s / PortMaster / NextOS
 
 A native AArch64 port adapter for **Jetpack Joyride v1.16.2** running on the **R36s handheld console** (Rockchip RK3326 SoC, Mali-G31 MP2 GPU, ARM 64-bit CPU, 1GB RAM).
 
