@@ -2,21 +2,19 @@
 
 A native AArch64 port adapter for **Jetpack Joyride v1.16.2** running on the **R36s handheld console** (Rockchip RK3326 SoC, Mali-G31 MP2 GPU, ARM 64-bit CPU, 1GB RAM).
 
-Built using the `nextos-framework` Track 8 (native Android SO loader adapter).
+# Installation
 
-## Features
-- Full AArch64 binary targeting Linux with GLIBC 2.17 compatibility (compatible with ArkOS, AmberELEC, JELOS, Rocknix, muOS, etc.).
-- Direct OpenGL ES 2.0 rendering via SDL2.
-- Low-latency PCM stereo audio queue at 44.1 kHz via SDL2.
-- Full PortMaster controller mapping:
-  - Gamepad buttons (A, B, R1/R2) for jetpack thrust.
-  - Left stick / D-Pad for cursor navigation in menus.
-  - Start / Select for back, pause and quit.
-- Integrated offline content-driven NXExtract verification recipe (`extractor.json`).
+1. Extract the contents of this archive into the `ports/` directory of your SD card (used by PortMaster).
+   The resulting layout must contain:
+   - `ports/Joyride.sh`
+   - `ports/joyride/`
 
-## Requirements
-- Target: R36s or any AArch64 RK3326 device running a PortMaster-compatible Linux distribution.
-- Commercial data: A legally acquired copy of Jetpack Joyride v1.16.2 APK (`com.halfbrick.jetpackjoyride.apk`).
+2. Copy your legally owned **Jetpack Joyride v1.16.2 arm64-v8a APK** into:
+   - `ports/joyride/gamedata/` (or directly into `ports/joyride/`)
+   Standard filename: `com.halfbrick.jetpackjoyride.apk`.
+
+3. Launch **Jetpack Joyride** from the Ports menu on your handheld (R36s / ArkOS / AmberELEC / Rocknix).
+   On the first launch, the automated extractor will validate and prepare the game data.
 
 ## License
 The adapter source code and build scripts are licensed under the GNU General Public License v3.0 (GPL-3.0-only).
